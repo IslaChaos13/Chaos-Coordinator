@@ -9,17 +9,21 @@
 
 
 </head>
-<body>
+<body id = mainBody>
+    <h1>Chaos Coordinator</h1>
 
-      <h1>Chaos Coordinator</h1>
-      <form>
+    <div id = "MasterList">
+
+<h1>Personal</h1>
+    <form>
         <input id = "inputTask" type = "text" placeholder = "Enter task">
+        <button id = "listBtn" type="button" class="btn btn-secondary btn-sm">Add</button>
+    <ul id = "mainList"></ul>
+    </form>
+</div>
 
-        <button id = "listBtn" type="button">Add</button>
-
-         <ul id = "mainList"></ul>
-      </form>
       <script src="./index.js"></script>
+
 </body>
 </html>
 

@@ -1,3 +1,33 @@
 h1 {
-    color: purple;
+    font-family: 'Franklin Gothic Medium';
+    color: rgb(243, 240, 240);
+    display: center;
+    text-align: center;
+    justify-content: center;
+}
+#mainBody{
+    background: black;
+}
+
+
+#MasterList{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    background-color: rgb(130, 145, 241);
+    text-align: center;
+    padding: 5px;
+    list-style-position: inside;
+    cursor: default;
+    }
+
+#mainList{
+    list-style: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14pt;
+}
+
+#MasterList h1{
+    color: white;
 }

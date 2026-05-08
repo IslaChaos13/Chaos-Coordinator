@@ -23,12 +23,9 @@ input.addEventListener("keydown", (event) => {
     }
 });
 
-
-
-
 list.addEventListener("mouseover", (event)=> {
     if (event.target.tagName === "LI"){
-        event.target.style.color = "green";
+        event.target.style.color = "blue";
         event.target.style.fontWeight = "bold"
     }
 });
@@ -54,4 +51,12 @@ list.addEventListener("click", (event) => {
     } else {
         event.target.style.textDecoration = "";
     }
+
+});
+
+list.addEventListener("click", (event) => {
+    if (event.target.style.textDecoration === "line-through"){
+        event.target.remove()
+    }else{
+        event.target.style.textDecoration = "line-through"}
 });
