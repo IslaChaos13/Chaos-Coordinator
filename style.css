@@ -1,19 +1,23 @@
-h1 {
+#mainBody{
+    background: black;
+}
+#mainBody h1{
     font-family: 'Franklin Gothic Medium';
     color: rgb(243, 240, 240);
     display: center;
     text-align: center;
     justify-content: center;
 }
-#mainBody{
-    background: black;
+
+#mainBody img{
+    opacity: 50%;
 }
 
 
 #MasterList{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
-    background-color: rgb(130, 145, 241);
+    background-color: rgb(97, 116, 237);
     text-align: center;
     padding: 5px;
     list-style-position: inside;
@@ -31,3 +35,4 @@ h1 {
 #MasterList h1{
     color: white;
 }
+

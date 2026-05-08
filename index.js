@@ -60,3 +60,5 @@ list.addEventListener("click", (event) => {
     }else{
         event.target.style.textDecoration = "line-through"}
 });
+
+list.addEventListener('contextmenu', (event))
