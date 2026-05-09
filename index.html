@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-
 </head>
 <body id = mainBody>
+
 
     <h1><img src = "Images/Chaos.png" alt="Chaos">Chaos Coordinator</h1>
 
     <!-- Personal To Do List -->
-
-    <div id = "pList">
+<div id = 'lists'>
+    <div class = "listBox">
         <h1>Personal</h1>
     <form>
         <input id = "inputTask" type = "text" placeholder = "Enter task">
@@ -25,7 +25,7 @@
 
 </div>
 <!-- Work To Do List -->
-<div id = "wList">
+<div class = "listBox">
     <h1>Work</h1>
     <form>
         <input id = 'wInput' type = "text" placeholder = "Enter task">
@@ -35,7 +35,7 @@
 </div>
 
 <!-- School To Do List -->
- <div id = "sList">
+ <div class = "listBox">
     <h1>School</h1>
     <form>
         <input id = 'sInput' type = "text" placeholder = "Enter task">
@@ -44,13 +44,15 @@
     </form>
 </div>
 
+</div>
 <!-- Completed Task -->
 <div>
     <h3>Completed</h3>
     <ul id = "completedList"></ul>
 </div>
 
-      <script src="./index.js"></script>
+
+<script src="./index.js"></script>
 
 </body>
 </html>
