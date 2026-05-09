@@ -55,6 +55,7 @@ taskGroup.forEach(group => {
 
         const item = event.target
         item.style.textDecoration = "line-through";
+        item.style.color = "white";
         fin.appendChild(item)
     })
 
