@@ -13,21 +13,41 @@
 
     <h1><img src = "Images/Chaos.png" alt="Chaos">Chaos Coordinator</h1>
 
-    <div id = "MasterList">
+    <!-- Personal To Do List -->
 
-<h1>Personal</h1>
+    <div id = "pList">
+        <h1>Personal</h1>
     <form>
         <input id = "inputTask" type = "text" placeholder = "Enter task">
         <button id = "listBtn" type="button" class="btn btn-secondary btn-sm">Add</button>
     <ul id = "mainList"></ul>
     </form>
 
-
+</div>
+<!-- Work To Do List -->
+<div id = "wList">
+    <h1>Work</h1>
+    <form>
+        <input id = 'wInput' type = "text" placeholder = "Enter task">
+        <button id = "wBtn" type ="button" class="btn btn-secondary btn-sm">Add</button>
+        <ul id = "wList"></ul>
+    </form>
 </div>
 
-<div>
+<!-- School To Do List -->
+ <div id = "sList">
+    <h1>School</h1>
+    <form>
+        <input id = 'sInput' type = "text" placeholder = "Enter task">
+        <button id = "sBtn" type ="button" class="btn btn-secondary btn-sm">Add</button>
+        <ul id = "sList"></ul>
+    </form>
+</div>
 
-    <ul id = "completedList"><h3>Completed</h3></ul>
+<!-- Completed Task -->
+<div>
+    <h3>Completed</h3>
+    <ul id = "completedList"></ul>
 </div>
 
       <script src="./index.js"></script>

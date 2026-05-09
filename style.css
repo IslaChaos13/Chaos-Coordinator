@@ -14,7 +14,7 @@
 }
 
 
-#MasterList{
+#pList form{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     background-color: rgb(97, 116, 237);
@@ -52,4 +52,24 @@ div h3{
     display: center;
     text-align: center;
     justify-content: center;
+}
+
+#wList form{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    background-color: rgb(71, 85, 176);
+    text-align: center;
+    padding: 5px;
+    list-style-position: inside;
+    cursor: default;
+    }
+
+#sList form{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    background-color: rgb(33, 40, 85);
+    text-align: center;
+    padding: 5px;
+    list-style-position: inside;
+    cursor: default;
 }
