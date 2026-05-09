@@ -1,75 +1,62 @@
-const input = document.querySelector('#inputTask')
-const button = document.querySelector('#listBtn')
-const list = document.querySelector('#mainList')
 const fin= document.querySelector('#completedList')
 
 let done = false;
 
-function addTask(event) {
+const taskGroup = [{
+    input: document.querySelector('#inputTask'),
+    list: document.querySelector('#mainList'),
+    button: document.querySelector('#listBtn'),
+},{
+    input: document.querySelector('#wInput'),
+    list: document.querySelector('#wList'),
+    button: document.querySelector('#wBtn'),
 
-    let text = input.value
+},{
+    input: document.querySelector('#sInput'),
+    list: document.querySelector('#sList'),
+    button: document.querySelector('#sBtn'),
 
-    const li = document.createElement("li")
+}]
 
-    li.textContent = text;
-
-    list.appendChild(li);
-    input.value = "";
+function addTask(input, list){
+    {
+        let text = input.value;
+        const li = document.createElement("li")
+        li.textContent = text;
+        list.appendChild(li);
+        input.value = "";
+    };
 }
+taskGroup.forEach(group => {
+    group.button.addEventListener('click', () => {
+        addTask(group.input, group.list);
+    });
 
-
-button.addEventListener('click', addTask)
-
-input.addEventListener("keydown", (event) => {
-    if (event.key === 'Enter') {
+    group.input.addEventListener("keydown", (event) => {
+        if (event.key ==='Enter'){
         event.preventDefault()
-        addTask();
-    }
-});
-
-list.addEventListener("mouseover", (event)=> {
-    if (event.target.tagName === "LI"){
+        addTask(group.input, group.list);
+        }
+    })
+    group.list.addEventListener("mouseover", (event) => {
+        if (event.target.tagName === "LI"){
         event.target.style.color = "blue";
         event.target.style.fontWeight = "bold"
-    }
-});
+        }}
+    )
 
-list.addEventListener("mouseout", (event)=>{
-    if (event.target.tagName === "LI"){
+    group.list.addEventListener("mouseout", (event) => {
+        if (event.target.tagName === "LI"){
         event.target.style.color = "";
         event.target.style.fontWeight = "";
-    }
-})
 
-// list.addEventListener("click", (event) => {
-//     if (event.target.tagName === "LI") {
-//         event.target.style.textDecoration = "line-through";
-//     }
-// });
+    group.list.addEventListener('click', (event) => {
+        if (event.target.tagName !== "LI") return;
 
-// list.addEventListener("click", (event) => {
-//     done = !done;
+        const item = event.target
+        item.style.textDecoration = "line-through";
+        fin.appendChild(item)
+    })
 
-//     if (done){
-//         event.target.style.textDecoration = "line-through";
-//     } else {
-//         event.target.style.textDecoration = "";
-//     }
+}})})
 
-// });
-
-list.addEventListener("click", (event) => {
-    if (event.target.tagName !== "LI") return;
-
-    const item = event.target;
-
-    item.style.textDecoration = "line-through";
-
-    fin.appendChild(item);
-});
-
-//     if (event.target.style.textDecoration === "line-through"){
-//         event.target.remove()
-//     }else{
-//         event.target.style.textDecoration = "line-through"}
-// });
