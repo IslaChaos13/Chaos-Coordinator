@@ -24,6 +24,10 @@
     cursor: default;
     }
 
+#MasterList h1{
+    color: white;
+}
+
 #mainList{
     list-style: none;
     color: white;
@@ -32,7 +36,20 @@
     font-size: 14pt;
 }
 
-#MasterList h1{
+#completedList{
+    list-style: none;
     color: white;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14pt;
+    text-align: center;
+    justify-content: center;
 }
 
+div h3{
+    font-family: 'Franklin Gothic Medium';
+    color: rgb(243, 240, 240);
+    display: center;
+    text-align: center;
+    justify-content: center;
+}

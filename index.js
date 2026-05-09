@@ -1,6 +1,8 @@
 const input = document.querySelector('#inputTask')
 const button = document.querySelector('#listBtn')
 const list = document.querySelector('#mainList')
+const fin= document.querySelector('#completedList')
+
 let done = false;
 
 function addTask(event) {
@@ -15,7 +17,9 @@ function addTask(event) {
     input.value = "";
 }
 
+
 button.addEventListener('click', addTask)
+
 input.addEventListener("keydown", (event) => {
     if (event.key === 'Enter') {
         event.preventDefault()
@@ -37,27 +41,35 @@ list.addEventListener("mouseout", (event)=>{
     }
 })
 
-list.addEventListener("click", (event) => {
-    if (event.target.tagName === "LI") {
-        event.target.style.textDecoration = "line-through";
-    }
-});
+// list.addEventListener("click", (event) => {
+//     if (event.target.tagName === "LI") {
+//         event.target.style.textDecoration = "line-through";
+//     }
+// });
+
+// list.addEventListener("click", (event) => {
+//     done = !done;
+
+//     if (done){
+//         event.target.style.textDecoration = "line-through";
+//     } else {
+//         event.target.style.textDecoration = "";
+//     }
+
+// });
 
 list.addEventListener("click", (event) => {
-    done = !done;
+    if (event.target.tagName !== "LI") return;
 
-    if (done){
-        event.target.style.textDecoration = "line-through";
-    } else {
-        event.target.style.textDecoration = "";
-    }
+    const item = event.target;
 
+    item.style.textDecoration = "line-through";
+
+    fin.appendChild(item);
 });
 
-list.addEventListener("click", (event) => {
-    if (event.target.style.textDecoration === "line-through"){
-        event.target.remove()
-    }else{
-        event.target.style.textDecoration = "line-through"}
-});
-
+//     if (event.target.style.textDecoration === "line-through"){
+//         event.target.remove()
+//     }else{
+//         event.target.style.textDecoration = "line-through"}
+// });
